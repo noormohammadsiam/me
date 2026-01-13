@@ -218,7 +218,8 @@
    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-        <!-- Animated Background -->
+
+            <!-- Animated Background -->
     <div class="animated-bg">
         <div class="bg-shape shape-1"></div>
         <div class="bg-shape shape-2"></div>
@@ -232,9 +233,12 @@
             <a href="#home" class="desktop-logo">NM<span>SiAM</span></a>
             <nav class="desktop-nav-menu">
                 <ul>
-                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                    <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                    <li><a href="#home" id="nav-home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#about" id="nav-about"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#education" id="nav-education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                    <li><a href="#skills" id="nav-skills"><i class="fas fa-code"></i> Skills</a></li>
+                    <li><a href="#experience" id="nav-experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+                    <li><a href="#achievements" id="nav-achievements"><i class="fas fa-trophy"></i> Achievements</a></li>
                 </ul>
                 
                 <!-- Connect Dropdown - Desktop -->
@@ -284,6 +288,15 @@
         </a>
         <a href="#education" class="mobile-nav-btn" title="Education">
             <i class="fas fa-graduation-cap"></i>
+        </a>
+        <a href="#skills" class="mobile-nav-btn" title="Skills">
+            <i class="fas fa-code"></i>
+        </a>
+        <a href="#experience" class="mobile-nav-btn" title="Experience">
+            <i class="fas fa-briefcase"></i>
+        </a>
+        <a href="#achievements" class="mobile-nav-btn" title="Achievements">
+            <i class="fas fa-trophy"></i>
         </a>
         
         <!-- Connect Dropdown - Mobile -->
@@ -432,7 +445,296 @@
                 </div>
             </div>
         </section>
+
+        <!-- Section 4: Skills & Technologies - Box Style -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <p class="section-subtitle">My Technical & Professional Expertise</p>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-box">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="skill-title">
+                                <h3>Programming Languages</h3>
+                                <p>Core development languages & frameworks</p>
+                            </div>
+                        </div>
+                        <div class="skills-items">
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item">HTML/CSS</span>
+                            <span class="skill-item">Java</span>
+                            <span class="skill-item">C++</span>
+                            <span class="skill-item">SQL</span>
+                            <span class="skill-item">PHP</span>
+                            <span class="skill-item">TypeScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="skill-title">
+                                <h3>AI & Data Science</h3>
+                                <p>Machine Learning & Data Analytics</p>
+                            </div>
+                        </div>
+                        <div class="skills-items">
+                            <span class="skill-item">Machine Learning</span>
+                            <span class="skill-item">Deep Learning</span>
+                            <span class="skill-item">Computer Vision</span>
+                            <span class="skill-item">Data Analysis</span>
+                            <span class="skill-item">Natural Language Processing</span>
+                            <span class="skill-item">TensorFlow</span>
+                            <span class="skill-item">PyTorch</span>
+                            <span class="skill-item">Scikit-learn</span>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="skill-title">
+                                <h3>Development Tools</h3>
+                                <p>Frameworks & Development Environment</p>
+                            </div>
+                        </div>
+                        <div class="skills-items">
+                            <span class="skill-item">Git & GitHub</span>
+                            <span class="skill-item">VS Code</span>
+                            <span class="skill-item">Docker</span>
+                            <span class="skill-item">React.js</span>
+                            <span class="skill-item">Node.js</span>
+                            <span class="skill-item">Postman</span>
+                            <span class="skill-item">Jupyter Notebook</span>
+                            <span class="skill-item">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-box">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="skill-title">
+                                <h3>Business & Leadership</h3>
+                                <p>Management & Strategic Skills</p>
+                            </div>
+                        </div>
+                        <div class="skills-items">
+                            <span class="skill-item">Strategic Planning</span>
+                            <span class="skill-item">Team Leadership</span>
+                            <span class="skill-item">Project Management</span>
+                            <span class="skill-item">Digital Marketing</span>
+                            <span class="skill-item">Business Development</span>
+                            <span class="skill-item">Financial Management</span>
+                            <span class="skill-item">Public Speaking</span>
+                            <span class="skill-item">Team Collaboration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Experience -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Experience</h2>
+                    <p class="section-subtitle">My Professional Journey</p>
+                </div>
+                <div class="experience-container">
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div class="experience-title">
+                                <h3>Chief Executive Officer (CEO) & Managing Director</h3>
+                                <h4>Mozammal Hoque Market (A Concern of Mozammal Hoque Group)</h4>
+                            </div>
+                            <div class="experience-date">2021 - Present</div>
+                        </div>
+                        <div class="experience-description">
+                            Leading strategic development and operations of one of Cumilla's prominent marketplaces. Overseeing business expansion, digital transformation initiatives, and team management.
+                        </div>
+                        <ul class="experience-highlights">
+                            <li>Increased annual revenue by 35% through strategic business development</li>
+                            <li>Implemented digital payment systems enhancing customer experience</li>
+                            <li>Managed a team of 20+ employees across various departments</li>
+                            <li>Developed and executed digital marketing strategies increasing online presence</li>
+                        </ul>
+                    </div>
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div class="experience-title">
+                                <h3>Technology Consultant & Digital Strategist</h3>
+                                <h4>Freelance & Independent Projects</h4>
+                            </div>
+                            <div class="experience-date">2020 - Present</div>
+                        </div>
+                        <div class="experience-description">
+                            Providing technology consultation and digital strategy services to local businesses and startups, focusing on digital transformation and online presence enhancement.
+                        </div>
+                        <ul class="experience-highlights">
+                            <li>Developed 10+ business websites and e-commerce platforms</li>
+                            <li>Consulted on digital marketing strategies for 5+ local businesses</li>
+                            <li>Created custom software solutions for business process automation</li>
+                            <li>Conducted digital literacy workshops for small business owners</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Achievements & Certificates -->
+        <section id="achievements" class="section achievements-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Achievements & Certificates</h2>
+                    <p class="section-subtitle">My Recognitions & Certifications</p>
+                </div>
+                <div class="achievements-container">
+                    <div class="achievement-card">
+                        <div class="achievement-header">
+                            <div class="achievement-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="achievement-title">
+                                <h3>Top Contributor - Bangla Wikipedia</h3>
+                                <div class="achievement-date">2023 - Present</div>
+                            </div>
+                        </div>
+                        <div class="achievement-description">
+                            Recognized as one of the top contributors to Bangla Wikipedia, with over 500+ edits and articles created to expand open access to knowledge in Bengali language. Actively working to bridge the digital knowledge gap in Bengali language.
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-header">
+                            <div class="achievement-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="achievement-title">
+                                <h3>Google Maps Local Guide - Level 7</h3>
+                                <div class="achievement-date">2022 - Present</div>
+                            </div>
+                        </div>
+                        <div class="achievement-description">
+                            Active contributor to Google Maps with 1000+ contributions including reviews, photos, and business information updates to strengthen digital connectivity. Helping local businesses gain visibility and improving navigation experiences.
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-header">
+                            <div class="achievement-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="achievement-title">
+                                <h3>Machine Learning Specialization</h3>
+                                <div class="achievement-date">2023</div>
+                            </div>
+                        </div>
+                        <div class="achievement-description">
+                            Completed comprehensive Machine Learning certification covering algorithms, neural networks, and practical applications in Python. Specialized in supervised and unsupervised learning techniques with hands-on project experience.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <!-- Contact With Me -->
+                <div class="footer-column">
+                    <h3>Contact With Me</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:nmsiambd@gmail.com">nmsiambd@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <a href="tel:+8809638325600">+880 9638 325600</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Mozammal Hoque Market, Bhaukshar Bazar, Cumilla 3500, Bangladesh</p>
+                            </div>
+                        </div>
+                        <a href="mailto:nmsiambd@gmail.com?subject=Appointment Request&body=Dear Noor Mohammad Siam,%0D%0A%0D%0AI would like to schedule an appointment with you. Please let me know your available time slots.%0D%0A%0D%0ABest regards," class="appointment-btn">
+                            <i class="fas fa-calendar-check"></i> Schedule Appointment
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Connect With Me -->
+                <div class="footer-column">
+                    <h3>Connect With Me</h3>
+                    <p style="color: #b0b0b0; margin-bottom: 25px; line-height: 1.6;">Stay connected through my social media channels and professional networks for updates, insights, and collaboration opportunities.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/noormohammadsiam8" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://x.com/siam8noor" target="_blank" title="Twitter/X">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/noormohammadsiam" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://instagram.com/noormohammadsiam8" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://noormohammadsiam.github.io/" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://connect.noormohammadsiam.com" target="_blank" title="Connect">
+                            <i class="fas fa-link"></i>
+                        </a>
+                    </div>
+                    
+                    <div style="margin-top: 30px;">
+                        <h4 style="color: white; font-size: 1.1rem; margin-bottom: 15px;">Professional Websites</h4>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <a href="https://www.noormohammadsiam.com" target="_blank" style="color: #b0b0b0; text-decoration: none; transition: color 0.3s ease; display: flex; align-items: center; gap: 10px;">
+                                <i class="fas fa-globe"></i> Personal Website
+                            </a>
+                            <a href="https://portfolio.noormohammadsiam.com" target="_blank" style="color: #b0b0b0; text-decoration: none; transition: color 0.3s ease; display: flex; align-items: center; gap: 10px;">
+                                <i class="fas fa-briefcase"></i> Portfolio
+                            </a>
+                            <a href="https://blog.nmsiam.com.bd" target="_blank" style="color: #b0b0b0; text-decoration: none; transition: color 0.3s ease; display: flex; align-items: center; gap: 10px;">
+                                <i class="fas fa-blog"></i> Blog
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Noor Mohammad Siam. All Rights Reserved.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">Entrepreneur | Tech Enthusiast | Community Builder | Digital Contributor | IT Innovator</p>
+            </div>
+        </div>
+    </footer>
+    
   <script src="script.js"></script>
 </body>
 </html>
