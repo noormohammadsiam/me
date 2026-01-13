@@ -125,30 +125,30 @@
         /* Desktop Header & Navigation */
         .desktop-header {
             display: block;
-            padding: 12px 0;
+            padding: 15px 0;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
         }
 
         body.dark-mode .desktop-header {
             background: rgba(30, 30, 30, 0.95);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.25);
         }
 
         .desktop-header.scrolled {
-            padding: 8px 0;
-            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            box-shadow: 0 5px 35px rgba(0, 0, 0, 0.12);
         }
 
         body.dark-mode .desktop-header.scrolled {
-            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 35px rgba(0, 0, 0, 0.35);
         }
 
         .desktop-nav-container {
@@ -173,68 +173,66 @@
         .desktop-nav-menu {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         .desktop-nav-menu ul {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 10px;
             margin: 0;
             padding: 0;
         }
 
+        /* Desktop Navigation Icons Only */
         .desktop-nav-menu li {
             position: relative;
         }
 
         .desktop-nav-menu a {
             text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            font-size: 15px;
-            padding: 8px 0;
-            transition: all 0.3s ease;
+            color: var(--gray);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
+            transition: all 0.3s ease;
+            background: var(--light-gray);
             position: relative;
         }
 
-        /* Active navigation link indicator */
+        body.dark-mode .desktop-nav-menu a {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--gray);
+        }
+
+        /* Active navigation icon */
         .desktop-nav-menu a.active {
-            color: var(--primary);
-        }
-
-        .desktop-nav-menu a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 3px;
+            color: white;
             background: var(--primary);
-            border-radius: 3px;
-            animation: slideIn 0.3s ease forwards;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
         }
 
-        @keyframes slideIn {
-            from {
-                width: 0;
-            }
-            to {
-                width: 100%;
-            }
+        body.dark-mode .desktop-nav-menu a.active {
+            background: var(--primary);
+            box-shadow: 0 5px 15px rgba(77, 171, 247, 0.4);
         }
 
         .desktop-nav-menu a:hover {
-            color: var(--primary);
+            color: white;
+            background: var(--primary);
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        body.dark-mode .desktop-nav-menu a:hover {
+            background: var(--primary);
         }
 
         .desktop-nav-menu a i {
-            font-size: 14px;
-            width: 18px;
-            text-align: center;
+            font-size: 1.1rem;
         }
 
         /* Connect Dropdown Styles - Desktop */
@@ -255,6 +253,11 @@
             transition: all 0.3s ease;
             color: var(--dark);
             font-size: 1.1rem;
+        }
+
+        body.dark-mode .connect-btn {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--gray);
         }
 
         .connect-btn:hover {
@@ -302,6 +305,11 @@
             gap: 12px;
             font-size: 0.95rem;
             margin-bottom: 5px;
+            width: 100%;
+            height: auto;
+            background: transparent;
+            transform: none;
+            justify-content: flex-start;
         }
 
         .connect-dropdown-content a:last-child {
@@ -347,6 +355,11 @@
             transition: all 0.3s ease;
             color: var(--dark);
             font-size: 1.1rem;
+        }
+
+        body.dark-mode .dark-mode-toggle {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--gray);
         }
 
         .dark-mode-toggle:hover {
@@ -718,7 +731,7 @@
             line-height: 1.6;
         }
 
-        /* Skills Section - Stacked Boxes (নিচে নিচে) */
+        /* Skills Section - Stacked Boxes */
         .skills-section {
             background: var(--light-gray);
         }
@@ -897,7 +910,7 @@
             font-weight: bold;
         }
 
-        /* Achievements Section - Experience এর মতো কার্ড স্টাইল */
+        /* Achievements Section */
         .achievements-section {
             background: var(--light-gray);
         }
@@ -1632,4 +1645,3 @@
                 font-size: 1.2rem;
             }
         }
-   
