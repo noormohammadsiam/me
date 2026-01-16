@@ -186,6 +186,56 @@
             margin-right: 10px;
         }
         
+        /* Circle Dot Loading Animation */
+        .loading-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            gap: 8px;
+            height: 30px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            animation: pulse-dot 1.5s infinite ease-in-out;
+        }
+        
+        .dot:nth-child(1) {
+            animation-delay: -0.3s;
+        }
+        
+        .dot:nth-child(2) {
+            animation-delay: -0.15s;
+        }
+        
+        .dot:nth-child(3) {
+            animation-delay: 0s;
+        }
+        
+        .dot:nth-child(4) {
+            animation-delay: 0.15s;
+        }
+        
+        .dot:nth-child(5) {
+            animation-delay: 0.3s;
+        }
+        
+        @keyframes pulse-dot {
+            0%, 60%, 100% {
+                opacity: 0.2;
+                transform: scale(0.8);
+            }
+            30% {
+                opacity: 1;
+                transform: scale(1.1);
+                background-color: #1d4ed8;
+            }
+        }
+        
         /* Responsive design */
         @media (max-width: 992px) {
             .container {
@@ -242,6 +292,10 @@
             
             .button-group {
                 gap: 12px;
+            }
+            
+            .loading-dots {
+                margin-top: 25px;
             }
         }
         
@@ -308,6 +362,16 @@
                 max-width: 280px;
                 min-width: auto;
             }
+            
+            .loading-dots {
+                margin-top: 20px;
+                gap: 6px;
+            }
+            
+            .dot {
+                width: 10px;
+                height: 10px;
+            }
         }
         
         @media (max-width: 400px) {
@@ -333,6 +397,10 @@
             
             .url-path {
                 font-size: 0.9rem;
+            }
+            
+            .loading-dots {
+                margin-top: 15px;
             }
         }
         
@@ -371,6 +439,15 @@
             <a href="/" class="home-button">
                 <i class="fas fa-home"></i> Go Back Home
             </a>
+        </div>
+        
+        <!-- Circle Dot Loading Animation -->
+        <div class="loading-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
         </div>
     </div>
 
