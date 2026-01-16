@@ -27,13 +27,19 @@
             background-size: 20px 20px;
         }
         
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+        }
+        
         .oops {
             font-size: 5rem;
             font-weight: 900;
             color: #3b82f6;
             margin-bottom: 10px;
             letter-spacing: -1px;
-            text-align: center;
         }
         
         .error-code {
@@ -43,7 +49,6 @@
             line-height: 1;
             margin: 10px 0;
             text-shadow: 3px 3px 0 rgba(59, 130, 246, 0.1);
-            text-align: center;
         }
         
         .error-title {
@@ -52,7 +57,6 @@
             color: #1e293b;
             margin-bottom: 20px;
             letter-spacing: -0.5px;
-            text-align: center;
         }
         
         .error-message {
@@ -60,29 +64,24 @@
             color: #64748b;
             max-width: 600px;
             margin: 0 auto 30px;
-            text-align: center;
         }
         
-        .missing-url {
+        .missing-url-container {
             background-color: #f1f5f9;
             border: 2px dashed #cbd5e1;
             border-radius: 12px;
-            padding: 15px 25px;
-            margin: 20px auto 40px;
+            padding: 20px;
+            margin: 25px auto 40px;
             max-width: 700px;
-            width: 100%;
-            font-family: monospace;
-            font-size: 1.1rem;
-            color: #475569;
-            word-break: break-all;
-            text-align: center;
+            width: calc(100% - 40px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
         
         .url-label {
             display: block;
             font-size: 0.9rem;
             color: #64748b;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -91,6 +90,17 @@
         .url-path {
             color: #ef4444;
             font-weight: bold;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            word-break: break-all;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            display: inline-block;
+            max-width: 100%;
+            text-align: center;
+            padding: 5px 0;
+            line-height: 1.4;
         }
         
         .home-button {
@@ -108,6 +118,7 @@
             position: relative;
             overflow: hidden;
             z-index: 1;
+            margin-top: 10px;
         }
         
         .home-button:before {
@@ -137,6 +148,18 @@
         }
         
         /* Responsive design */
+        @media (max-width: 992px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .missing-url-container {
+                width: calc(100% - 30px);
+                padding: 18px;
+                margin: 20px auto 35px;
+            }
+        }
+        
         @media (max-width: 768px) {
             .oops {
                 font-size: 3.5rem;
@@ -150,17 +173,37 @@
                 font-size: 2rem;
             }
             
-            .error-message, .missing-url {
+            .error-message {
                 font-size: 1.1rem;
-                padding: 0 20px;
+                padding: 0 10px;
+            }
+            
+            .missing-url-container {
+                padding: 16px;
+                margin: 20px auto 30px;
+                width: calc(100% - 20px);
+            }
+            
+            .url-path {
+                font-size: 1rem;
+                line-height: 1.5;
             }
             
             .home-button {
                 padding: 14px 30px;
+                font-size: 1rem;
             }
         }
         
-        @media (max-width: 480px) {
+        @media (max-width: 576px) {
+            body {
+                padding: 15px;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
             .oops {
                 font-size: 2.8rem;
             }
@@ -171,11 +214,64 @@
             
             .error-title {
                 font-size: 1.7rem;
+                margin-bottom: 15px;
             }
             
-            .error-message, .missing-url {
+            .error-message {
                 font-size: 1rem;
-                padding: 0 15px;
+                padding: 0;
+                margin-bottom: 25px;
+            }
+            
+            .missing-url-container {
+                padding: 14px 12px;
+                margin: 15px auto 25px;
+                width: 100%;
+                border-radius: 10px;
+            }
+            
+            .url-label {
+                font-size: 0.8rem;
+                margin-bottom: 8px;
+            }
+            
+            .url-path {
+                font-size: 0.95rem;
+                padding: 4px 0;
+                line-height: 1.5;
+            }
+            
+            .home-button {
+                padding: 12px 25px;
+                font-size: 0.95rem;
+                width: 90%;
+                max-width: 280px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .oops {
+                font-size: 2.5rem;
+            }
+            
+            .error-code {
+                font-size: 4.5rem;
+            }
+            
+            .error-title {
+                font-size: 1.5rem;
+            }
+            
+            .error-message {
+                font-size: 0.95rem;
+            }
+            
+            .missing-url-container {
+                padding: 12px 10px;
+            }
+            
+            .url-path {
+                font-size: 0.9rem;
             }
         }
         
@@ -192,22 +288,24 @@
     </style>
 </head>
 <body>
-    <h1 class="oops">Oops!</h1>
-    <div class="error-code">404</div>
-    <h2 class="error-title">Page Not Found!</h2>
-    
-    <p class="error-message">
-        We can't seem to find the page you are looking for. The page might have been moved, deleted, or perhaps you mistyped the URL.
-    </p>
-    
-    <div class="missing-url">
-        <span class="url-label">Missing URL:</span>
-        <span id="missing-url-text" class="url-path"></span>
+    <div class="container">
+        <h1 class="oops">Oops!</h1>
+        <div class="error-code">404</div>
+        <h2 class="error-title">Page Not Found!</h2>
+        
+        <p class="error-message">
+            We can't seem to find the page you are looking for. The page might have been moved, deleted, or perhaps you mistyped the URL.
+        </p>
+        
+        <div class="missing-url-container">
+            <span class="url-label">Missing URL:</span>
+            <div id="missing-url-text" class="url-path"></div>
+        </div>
+        
+        <a href="/" class="home-button">
+            <i class="fas fa-home"></i> Go Back Home
+        </a>
     </div>
-    
-    <a href="/" class="home-button">
-        <i class="fas fa-home"></i> Go Back Home
-    </a>
 
     <script>
         // Add a simple interactive effect to the 404 text
@@ -217,13 +315,17 @@
             
             // Get the current URL path
             const currentPath = window.location.pathname;
+            const currentUrl = window.location.href;
             
             // Display the missing URL path
-            if (currentPath && currentPath !== '/404.html') {
+            if (currentPath && currentPath !== '/404.html' && currentPath !== '/') {
                 missingUrlText.textContent = currentPath;
+            } else if (currentPath === '/') {
+                // If someone directly visits 404 page, show the full URL
+                missingUrlText.textContent = currentUrl;
             } else {
-                // If we can't get the actual path, show a generic message
-                missingUrlText.textContent = window.location.href;
+                // Fallback to full URL
+                missingUrlText.textContent = currentUrl;
             }
             
             errorCode.addEventListener('mouseover', function() {
